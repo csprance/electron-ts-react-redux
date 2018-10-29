@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
 import { MemoryRouter as Router, Route, Switch } from 'react-router';
 import { Store } from 'redux';
 
@@ -31,4 +30,4 @@ class WrappedApp extends React.Component<Props, State> {
     );
   }
 }
-export const App = connect()(WrappedApp);
+export const App = WrappedApp;

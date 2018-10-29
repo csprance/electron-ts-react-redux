@@ -6,7 +6,7 @@ import installExtension, {
   REDUX_DEVTOOLS
 } from 'electron-devtools-installer';
 import * as path from 'path';
-import 'reflect-metadata';
+// import 'reflect-metadata';
 import logger from './lib/logger';
 
 // Keep a global reference of the window object, if you don't, the window will

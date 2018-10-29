@@ -1,7 +1,7 @@
-import * as React from 'react';
-import styled from 'styled-components';
 import Checkbox from '@material-ui/core/Checkbox';
 import Typography from '@material-ui/core/Typography/Typography';
+import * as React from 'react';
+import styled from 'styled-components';
 
 import { Todo } from '../redux/todo';
 

@@ -1,20 +1,19 @@
-import * as React from 'react';
+import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import TextField from '@material-ui/core/TextField';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import AddIcon from '@material-ui/icons/Add';
+import MenuIcon from '@material-ui/icons/Menu';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
-import Toolbar from '@material-ui/core/Toolbar';
-import TextField from '@material-ui/core/TextField';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import AddIcon from '@material-ui/icons/Add';
-import Typography from '@material-ui/core/Typography';
-import AppBar from '@material-ui/core/AppBar';
 
-import { media } from '../../styles/styles';
-import { Dispatch, RootState } from '../redux/redux-types';
-import { TodoState } from '../redux/todo';
 import SingleTodo from '../components/SingleTodo';
-import { Todo, todoActions } from '../redux/todo';
+import { Dispatch, RootState } from '../redux/redux-types';
+import { Todo, todoActions, TodoState } from '../redux/todo';
+import { media } from '../styles/styles';
 
 const Wrapper = styled.div`
   display: flex;
@@ -47,9 +46,9 @@ const Spacer = styled.div`
 `;
 
 type Props = {
-  todos?: TodoState;
-  addTodoFlow?: (todo: Todo) => Promise<void>;
-  toggleComplete?: (id: number) => void;
+  todos: TodoState;
+  addTodoFlow: (todo: Todo) => Promise<void>;
+  toggleComplete: (id: number) => void;
 };
 type State = {
   todo: string;
@@ -61,10 +60,11 @@ class HomePage extends React.Component<Props, State> {
   };
 
   handleMenuButtonClick = () => {
-    notify('Also comes with SweetAlert');
+    console.log('Nothing');
+
   };
 
-  handleCheckBoxTick = id => {
+  handleCheckBoxTick = (id: number) => {
     this.props.toggleComplete(id);
   };
 
@@ -79,7 +79,7 @@ class HomePage extends React.Component<Props, State> {
     });
   };
 
-  handleChange = e => {
+  handleChange = (e: any) => {
     this.setState({
       todo: e.target.value
     });
@@ -91,7 +91,7 @@ class HomePage extends React.Component<Props, State> {
     return (
       <Wrapper>
         <AppBar position="static">
-          <Toolbar >
+          <Toolbar>
             <IconButton
               onClick={this.handleMenuButtonClick}
               color="inherit"
