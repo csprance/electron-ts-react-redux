@@ -1,5 +1,5 @@
 import Checkbox from '@material-ui/core/Checkbox';
-import Typography from '@material-ui/core/Typography/Typography';
+import Typography from '@material-ui/core/Typography';
 import * as React from 'react';
 import styled from 'styled-components';
 
@@ -28,7 +28,7 @@ class SingleTodo extends React.Component<Props> {
     return (
       <Wrapper>
         <Typography
-          variant={'headline'}
+          variant={'h5'}
           gutterBottom
           style={{
             textDecoration: todo.completed ? 'line-through' : 'none',

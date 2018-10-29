@@ -1,4 +1,3 @@
-import { createMuiTheme } from '@material-ui/core/styles';
 import * as React from 'react';
 import Responsive from 'react-responsive';
 import styled, { css } from 'styled-components';
@@ -11,21 +10,6 @@ export const mediaQuerySizes = {
   tablet: 768,
   phone: 500
 };
-
-// The material ui theme
-export const theme = createMuiTheme({
-  palette: {
-    background: {
-      default: '#ededed'
-    },
-    primary: {
-      main: '#3f50b2'
-    },
-    secondary: {
-      main: '#fc3d04'
-    }
-  }
-});
 
 export const Desktop = (props: any) => <Responsive {...props} minWidth={992} />;
 export const Tablet = (props: any) => (

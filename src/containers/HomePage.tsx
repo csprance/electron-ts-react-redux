@@ -99,7 +99,7 @@ class HomePage extends React.Component<Props, State> {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="title" color="inherit">
+            <Typography variant="h6" color="inherit">
               Next-SMRT
             </Typography>
           </Toolbar>

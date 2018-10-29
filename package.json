@@ -2,7 +2,7 @@
   "name": "electron-ts-react-redux",
   "productName": "electron-ts-react-redux",
   "version": "0.0.1",
-  "description": "",
+  "description": "electron-ts-react-redux",
   "main": "src/index.ts",
   "scripts": {
     "start": "electron-forge start",
@@ -13,9 +13,7 @@
     "lint": "tslint --project tsconfig.json --type-check --force"
   },
   "keywords": [
-    "miscreated",
-    "rcon",
-    "misrcon"
+    "electron-ts-react-redux"
   ],
   "author": {
     "name": "Chris Sprance",
@@ -48,11 +46,11 @@
       "electronInstallerRedhat": {},
       "github_repository": {
         "owner": "csprance",
-        "name": "misrcon"
+        "name": "electron-ts-react-redux"
       },
       "windowsStoreConfig": {
-        "packageName": "MisRCON",
-        "name": "misrcon"
+        "packageName": "electron-ts-react-redux",
+        "name": "electron-ts-react-redux"
       }
     }
   },
