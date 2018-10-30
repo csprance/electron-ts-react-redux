@@ -6,7 +6,8 @@ import installExtension, {
   REDUX_DEVTOOLS
 } from 'electron-devtools-installer';
 import * as path from 'path';
-// import 'reflect-metadata';
+
+import { name } from '../package.json';
 import logger from './lib/logger';
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -20,14 +21,14 @@ if (isDevMode) {
 }
 
 const createWindow = async () => {
-  logger.info('MisRCON Starting');
+  logger.info(`${name} Starting`);
 
   const windowOptions: Electron.BrowserWindowConstructorOptions = {
     width: 1024,
     height: 768,
     backgroundColor: '#333333',
     show: false,
-    icon: path.join(__dirname, 'resources/images/64x64.png'),
+    icon: path.join(__dirname, 'resources/images/64x64.png')
     // TODO: Add in Custom Menu like discord
     // frame: false
   };

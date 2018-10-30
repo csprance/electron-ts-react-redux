@@ -61,7 +61,6 @@ class HomePage extends React.Component<Props, State> {
 
   handleMenuButtonClick = () => {
     console.log('Nothing');
-
   };
 
   handleCheckBoxTick = (id: number) => {

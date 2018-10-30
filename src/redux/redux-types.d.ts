@@ -7,8 +7,7 @@ import { TodoActions } from './todo';
 
 export interface RootState extends StateType<typeof rootReducer> {}
 
-export type RootAction =
-  |TodoActions;
+export type RootAction = TodoActions;
 
 export type AsyncThunkResult<R> = ThunkAction<
   Promise<R>,
